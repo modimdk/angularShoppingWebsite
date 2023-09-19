@@ -5,3 +5,15 @@
     line-height: 4;
     margin: auto;
 }
+
+.header-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.search-input {
+    border: 2px solid rgb(187, 185, 185);
+    padding-left: 2% 1%;
+    margin: 1%;
+}
