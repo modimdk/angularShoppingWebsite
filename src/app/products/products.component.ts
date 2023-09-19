@@ -1,6 +1,7 @@
 import { Component, Inject, Input, OnInit } from '@angular/core';
 import { ProductsService } from './products.service';
 import { Product } from './products.model';
+import { TimePipe } from './time.pipe';
 
 @Component({
   selector: 'app-products',
@@ -11,13 +12,16 @@ import { Product } from './products.model';
 export class ProductsComponent implements OnInit {
   products: Product[] = [];
   filterdProducts: Product[] = [];
+  date = new Date();
 
   constructor(private productService: ProductsService) {
     this.products = productService.getProducts();
   }
 
   ngOnInit() {
-    this.filterdProducts.push(...this.products);
+    this.filterdProducts.push(...this.products);   
+    console.log(this.date.getFullYear()+"/"+this.date.getMonth() +"/"+this.date.getDate() );
+     
   }
 
   selectCategory(cagtegoryNames: string[]) {

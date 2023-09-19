@@ -15,6 +15,7 @@ import { CartItemComponent } from './cart/cart-list/cart-item/cart-item.componen
 import { ProductFilterComponent } from './products/product-filter/product-filter.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FilterPipe } from './filter.pipe';
+import { TimePipe } from './products/time.pipe';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { FilterPipe } from './filter.pipe';
     CartItemComponent,
     ProductFilterComponent,
     FilterPipe,
+    TimePipe
   ],
   imports: [
     BrowserModule,
