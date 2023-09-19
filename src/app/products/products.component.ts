@@ -14,6 +14,7 @@ export class ProductsComponent implements OnInit {
   filterdProducts: Product[] = [];
   date = new Date();
   _ = require('lodash');
+  sortDirection: string ='asc'
 
   constructor(private productService: ProductsService) {
     this.products = productService.getProducts();
@@ -55,6 +56,6 @@ export class ProductsComponent implements OnInit {
   }
 
   sortProducts(direction: string) {
-    this.filterdProducts = this._.orderBy(this.products, ['price'], [direction]);
+    this.filterdProducts = this._.orderBy(this.filterdProducts, ['price'], [direction]);
   }
 }

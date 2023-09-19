@@ -1,22 +1,19 @@
-<div class="container" style="margin: 1%;">
+<div class="container" style="margin: 1%">
   <div class="row">
-    <div class="col-sm-3">
-      SignIn/Login
-    </div>
+    <div class="col-sm-3">SignIn/Login</div>
     <div class="col-sm-3">
       Sort:
       <div class="btn-group">
-        <button class="btn btn-default btn-sm" (click)="sortProducts('asc')">
+        <button class="btn btn-default btn-sm" (click)="sortDirection ='asc'">
           <i class="glyphicon glyphicon-sort-by-order"></i>
         </button>
-        <button class="btn btn-default btn-sm" (click)="sortProducts('desc')">
+        <button class="btn btn-default btn-sm" (click)="sortDirection ='desc'">
           <i class="glyphicon glyphicon-sort-by-order-alt"></i>
         </button>
       </div>
     </div>
     <div class="col-sm-6">
-      <input type="search" placeholder="Search..." class="form-control">
-
+      <input type="search" placeholder="Search..." class="form-control" />
     </div>
   </div>
 </div>
@@ -35,5 +32,5 @@
   ></app-product-filter>
 </div>
 <div class="col-md-9">
-  <app-product-list [products]="filterdProducts"></app-product-list>
+  <app-product-list [products]="filterdProducts| sortProducts:'price' : sortDirection"></app-product-list>
 </div>
