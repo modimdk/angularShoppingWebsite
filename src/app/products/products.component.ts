@@ -13,15 +13,21 @@ export class ProductsComponent implements OnInit {
   products: Product[] = [];
   filterdProducts: Product[] = [];
   date = new Date();
+  _ = require('lodash');
 
   constructor(private productService: ProductsService) {
     this.products = productService.getProducts();
   }
 
   ngOnInit() {
-    this.filterdProducts.push(...this.products);   
-    console.log(this.date.getFullYear()+"/"+this.date.getMonth() +"/"+this.date.getDate() );
-     
+    this.filterdProducts.push(...this.products);
+    console.log(
+      this.date.getFullYear() +
+        '/' +
+        this.date.getMonth() +
+        '/' +
+        this.date.getDate()
+    );
   }
 
   selectCategory(cagtegoryNames: string[]) {
@@ -46,5 +52,9 @@ export class ProductsComponent implements OnInit {
     if (this.filterdProducts.length === 0) {
       this.filterdProducts.push(...this.products);
     }
+  }
+
+  sortProducts(direction: string) {
+    this.filterdProducts = this._.orderBy(this.products, ['price'], [direction]);
   }
 }
