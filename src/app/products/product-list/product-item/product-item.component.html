@@ -1,0 +1,19 @@
+<div class="col-lg-3 col-sm-6 product-items" >
+  <div class="card-container">
+    <img
+      class="img-responsive detail-img"
+      [src]="product.imagePath"
+      alt="Card image cap"
+    />
+    <div class="card-body">
+      <div>{{product.category}}</div>
+      <h5 class="card-title">{{ product.name }}</h5>
+      <!-- <p class="card-text">{{ product.description }}</p> -->
+      <p>{{product.price}} $</p>
+      <button href="#" class="btn detail-btn" (click)="onAddToCart()">
+        Add To Cart
+      </button>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,19 @@
+<div class="container detail-cotainer">
+  <div class="row detail-row">
+    <div class="col-md-5">
+      <img
+        class="detail-img"
+        [src]="product.imagePath"
+      />
+    </div>
+    <div class="col-md-7">
+      <div class="">
+        <h1>{{product.name}}</h1>
+        <div>{{product.description}}</div>
+        <button
+        (click)="onAddToCart()" 
+        class="btn add-to-card-btn">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>

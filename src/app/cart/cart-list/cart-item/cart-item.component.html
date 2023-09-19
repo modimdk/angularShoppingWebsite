@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-xs-12 cart-container" *ngIf="cartProduct!.count !== 0">
+    <div class="col-md-1">
+      <img
+        (click)="onDeleteItem(cartProduct!.productItems)"
+        class="remove-icon"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAeFBMVEX///8AAAAwMDCWlpb09PSysrKjo6PW1tbx8fF4eHhycnJISEjCwsIYGBj4+Pjc3NwgICDPz8/m5uYlJSWJiYlSUlI1NTWtra1kZGTZ2dmdnZ24uLg9PT3p6elfX19sbGxBQUGBgYGPj4/Hx8cTExOFhYVNTU0jIyMh1ihQAAAFYklEQVR4nO2d6WKbOhBGje043oIXsHG8UG9p3/8NbwNFI3IFGkCRRPudvwgxx2bVMhoMvoH3Y7oOmrJOj+/fEcw3cDo3tis4n1wHz+Cya+33ye7iWkDHaye/T15dK9Sz6SwYBBvXEnVsDQgGwda1Rg3drsGCnWuNak5GBIPA3ztqZMgwci1ShXwfnU9emjGZS3v7ej+9iwjfVi12X72J/UfGYzPDQkTYRvC3oth/YTgyUwyLAH+0rOBHUcHQaFzGGIu37aRlDUlRwXpsNDJTTMV1tGxZw1Jcx1OjkZkChnpg6BoY6oGha2CoB4augaEeGLomFN8Wj5Y1PIoK1qHRyCrZJPPFeciniC+IGuwkQ+08DXY6L+ZJqybWRxr0ibThlRFOmvcduWY9aXBqL001C9ol4razhv06P2VS1t+40lfkMYxWPhO9Ry7R3lb7LqhVNNM95pb6zrlhufA+vd1HTbjfZl1pfMR0Xw66tl9nVioaryy9PHUkXMWluGfVRUsX4Uc/9HLCmxx69aUoDRN5et2brmDzpODPVYWWVCbyuS9dzVZ6Eat6SZX+wv4Jlp4DFX/iVv8b+M1S9w9RF27b/j/XiP7H4K7cftb8Av5Dr9TK0/QiNqe2IzMGfRWphsfRw7CfV+EnNKBH9bB76f1JKt8sXxRbxY1mbT0wc4jGF9Wt5lZs3FuPyxziJfym2CjGJPk6mIWDGNIzV2yEYS+AIQz9B4Yw9B8YwtB/YPivGA5P0jSIZOI7iRTtacgy/CuAYf/5Nw1n+t16hKoPceI6KKNMFIZT10EZRTm40dQMUB+oGB31eujfaDYV60P1DM1wLEMjM+7h1D9C0Uo/HJTibjAAQRj6OadzRIZtgaFjYMgAho6BIQMYOgaGDGDoGBgygKFjYMgAho6BIQMYOgaGDGDoGBgygKFj7BmGo931wJukkaTnlJeRb3m47kb1PRDWDKf5APmYUWGeo5aTYzafFbqvzXFizbBIravPaPDxp+SHtmTRl1n7Y9gyFPNUfuqqC4uSgbb/62dRsm7+ji1D0XX81CWsfBeGuvTyYzHlte7EsGVI86V0hpSFV5dFdyxKquYvFcCQAQwzYEjAkIBhDgwZwDADhgQMCRjmwJABDDNgSMCQgGEODBnAMAOGBAwJGObAkAEMM2BIwJCAYQ4MGcAwA4YEDAkY5sCQAQwzYEjAkIBhDgwZwDADhgQMCRjmwJABDDNgSMCQgGEODBnAMAOGBAwJGObAkAEMM2BIwJCAYQ4MGcAwA4YEDAkY5sCQAQwzxGrYv3T5PGjJZd16vKFYwqAu7Y0tQ5GxRL+ad7G+e6QtKVbYrvvVrOWnOTL/mMHg8afkQ1uySAlzrCtkL4tStgpDpFon+itJVhsnjdIm0h/XYiasSzJa8haVmJ5Gp9rMSIJwOUpUy4dLINcXAxg6BoYMYOgYGDKAoWNgyACGjoEhg7/fcF9Uwckva5+4CG/fuoprUYW+gcIFoqnj2rqKtKjCz6W6xSLch9ZViBM90HxtO+Eiomt/mxANhaymFdskIjpepm0V1DB7NRaXOc4iOl1TdA2RqESfyto2tLhv+4dFaZ3nBgu0WoFSZyvXb+YirfOcGovNDCmFxmuerEBajly1lrc7jAVGnSm/nzr+nKjhQYpr1a2uD6mqX/r+Bjs85NW19Un66wmfUmXBtf2TxxjhaSGH9Nb5zNoEZQ7x5MUdk/jwJR5dZyuDY+Aztd1vXGL9cZzR9SL0XtHYd6uvJ6qRUzTnoT+aA4w+vMKZ/oCWmXf4olDy+vU27ZbUwFPif2zvkf7IVojijm9qNZJJvIue+hC+jWe0ixP9sBaZ/wDy9W0g5taVQAAAAABJRU5ErkJggg=="
+      />
+    </div>
+    <div class="col-lg-4">
+      <img
+        class="img-responsive"
+        style="
+          max-width: 180px;
+          max-height: 180px;
+          padding: 3%;
+          border-radius: 20px;
+        "
+        [src]="cartProduct?.productItems?.imagePath"
+      />
+    </div>
+    <div class="col-md-3" style="display: flex; flex-direction: column">
+      <div>{{ cartProduct?.productItems?.name }}</div>
+      <div>{{ cartProduct?.productItems?.description }}</div>
+    </div>
+    <div class="col-md-2" style="display: flex; align-items: center">
+      <div (click)="onAddItem(cartProduct!.productItems)" class="plus-icon">
+        +
+      </div>
+      <div style="margin: 2%">{{ cartProduct?.count }}</div>
+      <div (click)="onRemoveItem(cartProduct!.productItems)" class="plus-icon">
+        -
+      </div>
+    </div>
+    <div class="col-md-2">
+      Price:
+      {{
+        calculateTotalPrice(
+          cartProduct!.count,
+          cartProduct!.productItems!.price
+        )
+      }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<div class="filters-container">
+  <div class="filter-items">
+    <div class="filter-item">
+      Category 1
+      <input
+      type="checkbox"
+      (click)="onGetCategory($event,'category 1')"
+        style="cursor: pointer"
+      />
+    </div>
+    <div class="filter-item">
+      Category 2
+      <input
+      (click)="onGetCategory($event,'category 2')"
+        style="cursor: pointer"
+        type="checkbox"
+      />
+    </div>
+    <div class="filter-item">
+      Category 3
+      <input
+      (click)="onGetCategory($event,'category 3')"
+        style="cursor: pointer"
+        type="checkbox"
+      />
+    </div>
+  </div>
+</div>
+
+<!-- 
+<div class="filters-container">
+  <div class="filter-items">
+    <div class="filter-item">
+      Category 1
+      <input
+      type="checkbox"
+      [(ngModel)] = "filteredStatus"
+        style="cursor: pointer"
+      />
+    </div>
+    <div class="filter-item">
+      Category 2
+      <input
+      [(ngModel)] = "filteredStatus"
+        style="cursor: pointer"
+        type="checkbox"
+      />
+    </div>
+    <div class="filter-item">
+      Category 3
+      <input
+      [(ngModel)] = "filteredStatus"
+        style="cursor: pointer"
+        type="checkbox"
+      />
+    </div>
+  </div>
+</div> -->

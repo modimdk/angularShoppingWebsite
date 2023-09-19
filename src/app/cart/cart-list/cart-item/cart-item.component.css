@@ -1,0 +1,22 @@
+.cart-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+.remove-icon {
+    max-width: 20px;
+     margin-left: 50px; 
+     cursor: pointer
+}
+
+.plus-icon {
+    background-color: #00ADB5;
+    padding: 2% 5% ;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+}
