@@ -15,6 +15,7 @@ export class ProductsComponent implements OnInit {
   date = new Date();
   _ = require('lodash');
   sortDirection: string ='asc'
+  query = ''
 
   constructor(private productService: ProductsService) {
     this.products = productService.getProducts();

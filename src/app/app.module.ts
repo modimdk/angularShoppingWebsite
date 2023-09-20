@@ -17,6 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FilterPipe } from './filter.pipe';
 import { TimePipe } from './products/time.pipe';
 import { SortPipe } from './products/sort.pipe';
+import { SearchPipe } from './products/search.pipe';
 
 @NgModule({
   declarations: [
@@ -30,9 +31,10 @@ import { SortPipe } from './products/sort.pipe';
     CartListComponent,
     CartItemComponent,
     ProductFilterComponent,
+    SearchPipe,
     FilterPipe,
     TimePipe,
-    SortPipe
+    SortPipe,
   ],
   imports: [
     BrowserModule,

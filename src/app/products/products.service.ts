@@ -5,7 +5,7 @@ export class ProductsService {
     new Product(
       0,
       100,
-      'A Test Item1',
+      'Scarf1',
       'This is just a test',
       'https://assets.website-files.com/61a3c3005e14bffd1c77eea9/643d8c802b6503808352cf9c_mediamodifier-7cERndkOyDw-unsplash.webp',
       'category 1'
@@ -13,7 +13,7 @@ export class ProductsService {
     new Product(
       1,
       25,
-      'A Test Item2',
+      'Scarf2',
       'This is just a test',
       'https://assets.website-files.com/61a3c3005e14bffd1c77eea9/643d8c802b6503808352cf9c_mediamodifier-7cERndkOyDw-unsplash.webp',
       'category 2'
@@ -23,7 +23,7 @@ export class ProductsService {
       130,
       'A Test Item3',
       'This is just a test',
-      'https://assets.website-files.com/61a3c3005e14bffd1c77eea9/643d8c802b6503808352cf9c_mediamodifier-7cERndkOyDw-unsplash.webp',
+      'https://assets.website-files.com/61\a3c3005e14bffd1c77eea9/643d8c802b6503808352cf9c_mediamodifier-7cERndkOyDw-unsplash.webp',
       'category 1'
     ),
     new Product(

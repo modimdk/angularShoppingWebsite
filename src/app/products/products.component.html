@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="col-sm-6">
-      <input type="search" placeholder="Search..." class="form-control" />
+      <input type="search" [(ngModel)]="query" placeholder="Search..." class="form-control" />
     </div>
   </div>
 </div>
@@ -32,5 +32,5 @@
   ></app-product-filter>
 </div>
 <div class="col-md-9">
-  <app-product-list [products]="filterdProducts| sortProducts:'price' : sortDirection"></app-product-list>
+  <app-product-list [products]="filterdProducts| sortProducts:'price' : sortDirection | searchProducts: query" ></app-product-list>
 </div>
