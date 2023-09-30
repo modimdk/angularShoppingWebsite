@@ -10,29 +10,29 @@ import { CartService } from 'src/app/cart/cart.service';
   styleUrls: ['./product-detail.component.css'],
 })
 export class ProductDetailComponent implements OnInit {
-  constructor(
-    private productsService: ProductsService,
-    private cartService: CartService,
-    private router: Router,
-    private route: ActivatedRoute
-  ) {}
+  // constructor(
+  //   private productsService: ProductsService,
+  //   private cartService: CartService,
+  //   private router: Router,
+  //   private route: ActivatedRoute
+  // ) {}
 
-  product!: Product;
-  id!: number;
-  productItem = [] 
+  // product!: Product;
+  // id!: number;
+  // productItem = [] 
  
   ngOnInit() {
-    this.route.params.subscribe((params: Params) => {
-      this.id = +params['id'];
-      this.product = this.productsService.getProduct(this.id);
+    // this.route.params.subscribe((params: Params) => {
+    //   this.id = +params['id'];
+    //   this.product = this.productsService.getProduct(this.id);
       
-    });
+    // });
   }
 
 
-  onAddToCart() {
-    this.cartService.addToCart(this.product);
-    // console.log("this.product" +this.product.name);
-  }
+  // onAddToCart() {
+  //   this.cartService.addToCart(this.product);
+  //   // console.log("this.product" +this.product.name);
+  // }
   
 }

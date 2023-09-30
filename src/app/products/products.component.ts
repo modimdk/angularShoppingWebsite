@@ -1,7 +1,6 @@
 import { Component, Inject, Input, OnInit } from '@angular/core';
 import { ProductsService } from './products.service';
 import { Product } from './products.model';
-import { TimePipe } from './time.pipe';
 
 @Component({
   selector: 'app-products',
@@ -14,8 +13,8 @@ export class ProductsComponent implements OnInit {
   filterdProducts: Product[] = [];
   date = new Date();
   _ = require('lodash');
-  sortDirection: string ='asc'
-  query = ''
+  sortDirection: string = 'asc';
+  query = '';
 
   constructor(private productService: ProductsService) {
     this.products = productService.getProducts();
@@ -23,13 +22,6 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit() {
     this.filterdProducts.push(...this.products);
-    console.log(
-      this.date.getFullYear() +
-        '/' +
-        this.date.getMonth() +
-        '/' +
-        this.date.getDate()
-    );
   }
 
   selectCategory(cagtegoryNames: string[]) {
@@ -57,6 +49,10 @@ export class ProductsComponent implements OnInit {
   }
 
   sortProducts(direction: string) {
-    this.filterdProducts = this._.orderBy(this.filterdProducts, ['price'], [direction]);
+    this.filterdProducts = this._.orderBy(
+      this.filterdProducts,
+      ['price'],
+      [direction]
+    );
   }
 }

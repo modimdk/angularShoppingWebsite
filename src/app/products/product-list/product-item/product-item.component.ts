@@ -12,13 +12,22 @@ import { CartService } from 'src/app/cart/cart.service';
 export class ProductItemComponent implements OnInit {
   @Input() product!: Product;
 
-  constructor(private cartService: CartService) {}
+  constructor(
+    private cartService: CartService,
+    private productService: ProductsService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   onAddToCart() {
     alert('Added!');
     this.cartService.addToCart(this.product);
   }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  onNavigateToDetail(id: number) {
+    console.log('onNavigateToDetail');
+    this.router.navigate(['/detail', id], { relativeTo: this.route });
   }
 }
