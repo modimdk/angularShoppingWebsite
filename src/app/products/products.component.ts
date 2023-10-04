@@ -55,4 +55,43 @@ export class ProductsComponent implements OnInit {
       [direction]
     );
   }
+
+  imgCollection: Array<object> = [
+    {
+      image:   'https://assets.website-files.com/61a3c3005e14bffd1c77eea9/643d8c802b6503808352cf9c_mediamodifier-7cERndkOyDw-unsplash.webp',
+      thumbImage:   'https://assets.website-files.com/61a3c3005e14bffd1c77eea9/643d8c802b6503808352cf9c_mediamodifier-7cERndkOyDw-unsplash.webp',
+      alt: 'Image 1',
+      title: 'Image 1',
+    },
+    {
+      image:  'https://assets.website-files.com/61a3c3005e14bffd1c77eea9/643d8c802b6503808352cf9c_mediamodifier-7cERndkOyDw-unsplash.webp',
+      thumbImage:   'https://assets.website-files.com/61a3c3005e14bffd1c77eea9/643d8c802b6503808352cf9c_mediamodifier-7cERndkOyDw-unsplash.webp',
+      title: 'Image 2',
+      alt: 'Image 2',
+    },
+    {
+      image:   'https://assets.website-files.com/61a3c3005e14bffd1c77eea9/643d8c802b6503808352cf9c_mediamodifier-7cERndkOyDw-unsplash.webp',
+      thumbImage:  'https://assets.website-files.com/61a3c3005e14bffd1c77eea9/643d8c802b6503808352cf9c_mediamodifier-7cERndkOyDw-unsplash.webp',
+      title: 'Image 3',
+      alt: 'Image 3',
+    },
+    {
+      image:   'https://assets.website-files.com/61a3c3005e14bffd1c77eea9/643d8c802b6503808352cf9c_mediamodifier-7cERndkOyDw-unsplash.webp',
+      thumbImage:   'https://assets.website-files.com/61a3c3005e14bffd1c77eea9/643d8c802b6503808352cf9c_mediamodifier-7cERndkOyDw-unsplash.webp',
+      title: 'Image 4',
+      alt: 'Image 4',
+    },
+    {
+      image:  'https://assets.website-files.com/61a3c3005e14bffd1c77eea9/643d8c802b6503808352cf9c_mediamodifier-7cERndkOyDw-unsplash.webp',
+      thumbImage:  'https://assets.website-files.com/61a3c3005e14bffd1c77eea9/643d8c802b6503808352cf9c_mediamodifier-7cERndkOyDw-unsplash.webp',
+      title: 'Image 5',
+      alt: 'Image 5',
+    },
+    {
+      image:   'https://assets.website-files.com/61a3c3005e14bffd1c77eea9/643d8c802b6503808352cf9c_mediamodifier-7cERndkOyDw-unsplash.webp',
+      thumbImage:  'https://assets.website-files.com/61a3c3005e14bffd1c77eea9/643d8c802b6503808352cf9c_mediamodifier-7cERndkOyDw-unsplash.webp',
+      title: 'Image 6',
+      alt: 'Image 6',
+    },
+  ];
 }

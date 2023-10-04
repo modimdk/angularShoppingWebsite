@@ -4,27 +4,35 @@
     <div class="col-sm-3">
       Sort:
       <div class="btn-group">
-        <button class="btn btn-default btn-sm" (click)="sortDirection ='asc'">
+        <button class="btn btn-default btn-sm" (click)="sortDirection = 'asc'">
           <i class="glyphicon glyphicon-sort-by-order"></i>
         </button>
-        <button class="btn btn-default btn-sm" (click)="sortDirection ='desc'">
+        <button class="btn btn-default btn-sm" (click)="sortDirection = 'desc'">
           <i class="glyphicon glyphicon-sort-by-order-alt"></i>
         </button>
       </div>
     </div>
     <div class="col-sm-6">
-      <input type="search" [(ngModel)]="query" placeholder="Search..." class="form-control" />
+      <input
+        type="search"
+        [(ngModel)]="query"
+        placeholder="Search..."
+        class="form-control"
+      />
     </div>
   </div>
 </div>
 <div class="home-page-background">
-  <h1>Lorem ipsum dolor sit amet</h1>
-  <div>consectetur adipiscing elit, sed do eiusmod tempor</div>
-  <div>
-    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
-  </div>
-  <h1>{{ date | timePipe }}</h1>
+  <h1 style="margin-bottom: 2%;">Lorem ipsum dolor sit amet</h1>
+  <ng-image-slider
+    [images]="imgCollection"
+    [imageSize]="{ width: '30%', height: '40%' }"
+    [imagePopup]="false"
+    [infinite]="true"
+    [autoSlide]="1"
+    #nav
+  ></ng-image-slider>
+  <!-- <h1>{{ date | timePipe }}</h1> -->
 </div>
 <div class="col-md-3">
   <app-product-filter
@@ -32,5 +40,11 @@
   ></app-product-filter>
 </div>
 <div class="col-md-9">
-  <app-product-list [products]="filterdProducts| sortProducts:'price' : sortDirection | searchProducts: query" ></app-product-list>
+  <app-product-list
+    [products]="
+      filterdProducts
+        | sortProducts : 'price' : sortDirection
+        | searchProducts : query
+    "
+  ></app-product-list>
 </div>

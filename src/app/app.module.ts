@@ -17,6 +17,9 @@ import { SortPipe } from './products/sort.pipe';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
+import { NgImageSliderModule } from 'ng-image-slider';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 @NgModule({
   declarations: [
@@ -33,15 +36,18 @@ import { NgModule } from '@angular/core';
     ProductItemComponent,
     ProductFilterComponent,
     ProductDetailComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    MatIconModule,
+    NgImageSliderModule,
+    FormsModule,
+    MDBBootstrapModule.forRoot(),
   ],
   providers: [CartService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

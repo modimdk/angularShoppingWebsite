@@ -4,3 +4,7 @@
   /* background-color: #fff;  */
   margin-top: 2%;
 }
+
+input.ng-invalid.ng-dirty {
+  background-color: red;
+}
