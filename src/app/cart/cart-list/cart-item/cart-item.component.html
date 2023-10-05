@@ -24,11 +24,17 @@
       <div>{{ cartProduct?.productItems?.description }}</div>
     </div>
     <div class="col-md-2" style="display: flex; align-items: center">
-      <div (click)="onAddItem(cartProduct!.productItems)" class="plus-icon">
+      <div
+        (click)="onAddItem(cartProduct!.productItems, cartProduct!.count)"
+        class="plus-icon"
+      >
         +
       </div>
       <div style="margin: 2%">{{ cartProduct?.count }}</div>
-      <div (click)="onRemoveItem(cartProduct!.productItems)" class="plus-icon">
+      <div
+        (click)="onRemoveItem(cartProduct!.productItems, cartProduct!.count)"
+        class="plus-icon"
+      >
         -
       </div>
     </div>

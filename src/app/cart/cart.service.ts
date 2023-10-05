@@ -11,11 +11,12 @@ export class CartService {
     return this.cartData;
   }
 
-  addToCart(selectedProduct: Product) {
+  addToCart(selectedProduct: Product, count: number) {
     for (let i = 0; i < this.cartData.length; i++) {
       if (this.cartData[i].productItems === selectedProduct) {
         this.isIncluded = true;
-        this.cartData[i].count++;
+        this.cartData[i].count = count + 1;
+        // this.cartData[i].count++;
       } else {
         this.isIncluded = false;
       }
@@ -27,11 +28,11 @@ export class CartService {
     console.log(this.cartData);
   }
 
-  removeFromCart(selectedProduct: Product) {
+  removeFromCart(selectedProduct: Product, count: number) {
     for (let i = 0; i < this.cartData.length; i++) {
       if (this.cartData[i].productItems === selectedProduct) {
         this.isIncluded = true;
-        this.cartData[i].count--;
+        this.cartData[i].count = count - 1;
         if (this.cartData[i].count === 0) {
           this.cartData.splice(i, this.cartData[i].count);
           // this.cartData = this.cartData.filter(item => item.productItems.id !== selectedProduct.id);

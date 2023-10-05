@@ -21,7 +21,7 @@ export class ProductItemComponent implements OnInit {
 
   onAddToCart() {
     alert('Added!');
-    this.cartService.addToCart(this.product);
+    this.cartService.addToCart(this.product, 0);
   }
 
   ngOnInit() {}

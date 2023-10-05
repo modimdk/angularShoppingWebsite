@@ -22,13 +22,13 @@ export class CartItemComponent implements OnInit {
     return num1 * num2;
   }
 
-  onAddItem (product: Product) {
-    this.cartService.addToCart(product)
+  onAddItem (product: Product , count: number) {
+    this.cartService.addToCart(product, count)
   }
 
 
-  onRemoveItem(product: Product) {
-    this.cartService.removeFromCart(product);
+  onRemoveItem(product: Product, count: number) {
+    this.cartService.removeFromCart(product, count);
   }
 
   onDeleteItem(product: Product) {

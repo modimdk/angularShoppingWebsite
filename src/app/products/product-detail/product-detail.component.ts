@@ -39,9 +39,9 @@ export class ProductDetailComponent implements OnInit {
   }
 
 
-  // onAddToCart() {
-  //   this.cartService.addToCart(this.product);
-  //   // console.log("this.product" +this.product.name);
-  // }
+  onAddToCart() {
+    this.cartService.addToCart(this.product, this.productCount);
+    console.log("this.product" +this.product.name);
+  }
   
 }

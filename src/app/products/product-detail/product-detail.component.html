@@ -8,7 +8,7 @@
       <div style="margin-top: 4%">{{ product.description }}</div>
       <div style="margin-top: 7%">Price : {{ product.price }}</div>
       <div class="detail-buttons">
-        <button class="btn" style="background-color: #00adb5; color: aliceblue">
+        <button (click)="onAddToCart()" class="btn" style="background-color: #00adb5; color: aliceblue">
           Add to Cart
         </button>
         <div class="detail-numbers-btn">
