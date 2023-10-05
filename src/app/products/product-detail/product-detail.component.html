@@ -1,20 +1,22 @@
-<!-- <div class="container detail-cotainer">
-  <div class="row detail-row">
-    <div class="col-md-5">
-      <img
-        class="detail-img"
-        [src]="product.imagePath"
-      />
-    </div>
-    <div class="col-md-7">
-      <div class="">
-        <h1>{{product.name}}</h1>
-        <div>{{product.description}}</div>
-        <button
-        (click)="onAddToCart()" 
-        class="btn add-to-card-btn">Add to Cart</button>
+<div class="row detail-row">
+  <div class="col-xs-5">
+    <img class="detail-img" [src]="product.imagePath" />
+  </div>
+  <div class="col-xs-7">
+    <div class="">
+      <h1>{{ product.name }}</h1>
+      <div style="margin-top: 4%">{{ product.description }}</div>
+      <div style="margin-top: 7%">Price : {{ product.price }}</div>
+      <div class="detail-buttons">
+        <button class="btn" style="background-color: #00adb5; color: aliceblue">
+          Add to Cart
+        </button>
+        <div class="detail-numbers-btn">
+          <div (click)="onIncrementCount()">+</div>
+          <div style="color: black;">{{productCount}}</div>
+          <div (click)="onDecrementCount()">-</div>
+        </div>
       </div>
     </div>
   </div>
-</div> -->
-<h1>hello there</h1>
+</div>

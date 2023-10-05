@@ -20,6 +20,7 @@ import { NgModule } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { ProductsService } from './products/products.service';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     FormsModule,
     MDBBootstrapModule.forRoot(),
   ],
-  providers: [CartService],
+  providers: [CartService, ProductsService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
