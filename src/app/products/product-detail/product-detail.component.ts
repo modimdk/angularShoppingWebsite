@@ -19,29 +19,25 @@ export class ProductDetailComponent implements OnInit {
 
   product!: Product;
   id!: number;
-  productItem = [] 
-  productCount: number = 0
- 
+  productItem = [];
+  productCount: number = 1;
+
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
       this.id = +params['id'];
       this.product = this.productsService.getProduct(this.id);
-      
     });
   }
 
-  onIncrementCount () {
-    this.productCount++
+  onIncrementCount() {
+    this.productCount++;
   }
 
-  onDecrementCount () {
-    this.productCount--
+  onDecrementCount() {
+    this.productCount--;
   }
-
 
   onAddToCart() {
     this.cartService.addToCart(this.product, this.productCount);
-    console.log("this.product" +this.product.name);
   }
-  
 }

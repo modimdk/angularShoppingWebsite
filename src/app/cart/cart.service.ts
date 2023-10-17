@@ -21,9 +21,8 @@ export class CartService {
       }
     }
     if (!this.isIncluded) {
-      this.cartData.push(new CartItem(1, selectedProduct));
-    }
-    
+      this.cartData.push(new CartItem(count, selectedProduct));
+    }    
   }
 
   removeFromCart(selectedProduct: Product, count: number) {
@@ -38,7 +37,6 @@ export class CartService {
         }
       }
     }
-    console.log(this.cartData);
   }
 
   deleteFromCart(selectedProduct: Product) {
