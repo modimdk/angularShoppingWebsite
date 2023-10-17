@@ -11,6 +11,7 @@ import { CartService } from 'src/app/cart/cart.service';
 })
 export class ProductItemComponent implements OnInit {
   @Input() product!: Product;
+  count: number = 1;
 
   constructor(
     private cartService: CartService,
@@ -21,7 +22,9 @@ export class ProductItemComponent implements OnInit {
 
   onAddToCart() {
     alert('Added!');
-    this.cartService.addToCart(this.product, 0);
+    console.log(this.count);
+    // this.count++
+    this.cartService.addToCart(this.product, this.count);
   }
 
   ngOnInit() {}

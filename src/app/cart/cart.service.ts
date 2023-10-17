@@ -13,10 +13,9 @@ export class CartService {
 
   addToCart(selectedProduct: Product, count: number) {
     for (let i = 0; i < this.cartData.length; i++) {
-      if (this.cartData[i].productItems === selectedProduct) {
+      if (this.cartData[i].productItems.id === selectedProduct.id) {      
         this.isIncluded = true;
-        this.cartData[i].count = count + 1;
-        // this.cartData[i].count++;
+        this.cartData[i].count += count;
       } else {
         this.isIncluded = false;
       }
@@ -24,8 +23,7 @@ export class CartService {
     if (!this.isIncluded) {
       this.cartData.push(new CartItem(1, selectedProduct));
     }
-
-    console.log(this.cartData);
+    
   }
 
   removeFromCart(selectedProduct: Product, count: number) {
@@ -50,6 +48,5 @@ export class CartService {
         this.cartData.splice(i, this.cartData[i].count);
       }
     }
-    console.log(this.cartData);
   }
 }
